@@ -14,7 +14,7 @@
     <protocol>https</protocol>
     
     <!-- title of the document -->
-    <documentTitle>Learner Hub/documentTitle>
+    <documentTitle>Learner Hub</documentTitle>
     
     <!-- report name - displayed at top-nav -->
     <reportName>API Automation</reportName>
