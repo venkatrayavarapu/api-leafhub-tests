@@ -71,7 +71,7 @@ public class PreAndTest extends HTMLReporter{
 		else if(dataFileType.equalsIgnoreCase("JSON")){
 			System.out.println(System.getProperty("user.dir"));
 			Object[][] data = new Object[1][1];
-			data[0][0] = new File("./data/"+dataFileName+"."+dataFileType);
+			data[0][0] = new File("data/"+dataFileName+"."+dataFileType);
 			System.out.println(data[0][0]);
 			return data;
 		}else {
