@@ -14,13 +14,13 @@
     <protocol>https</protocol>
     
     <!-- title of the document -->
-    <documentTitle>Makaia Framework - REST, Selenium Project</documentTitle>
+    <documentTitle>Learner Hub/documentTitle>
     
     <!-- report name - displayed at top-nav -->
-    <reportName>Makaia Framework</reportName>
+    <reportName>API Automation</reportName>
     
     <!-- report headline - displayed at top-nav, after reportHeadline -->
-    <reportHeadline>POM Report</reportHeadline>
+    <reportHeadline>API Testing Report</reportHeadline>
     
     <!-- global date format override -->
     <!-- defaults to yyyy-MM-dd -->
