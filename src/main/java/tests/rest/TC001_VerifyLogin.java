@@ -16,14 +16,17 @@ public class TC001_VerifyLogin extends RESTAssuredBase{
 		authors = "Babu";
 		category = "API";
 		nodes="Login";
-		dataFileName = "TC001";
-		dataFileType = "JSON";
 	}
 
-	@Test(dataProvider = "fetchData")
-	public void verifyLogin(File file) {		
-				
-		Response response = postWithBodyAsFileAndUrl(file, "login");
+	@Test
+	public void verifyLogin() {		
+		
+		String file = "{\r\n"
+				+ "    \"userName\": \"Babu\",\r\n"
+				+ "    \"password\": \"admin\"\r\n"
+				+ "}";
+		
+		Response response = postWithJsonAsBody(file, "login");
 		verifyContentType(response, "application/json");
 		verifyResponseCode(response, 200);
 		verifyContentWithKey(response, "message", "Successfully Logged in");

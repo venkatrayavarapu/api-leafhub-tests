@@ -16,14 +16,25 @@ public class TC002_AddLearner extends RESTAssuredBase{
 		authors = "Babu";
 		category = "API";
 		nodes="Learner";
-		dataFileName = "TC002";
-		dataFileType = "JSON";
 	}
 
-	@Test(dataProvider = "fetchData")
-	public void addLearner(File file) {		
-				
-		Response response = postWithBodyAsFileAndUrl(file, "learner/add");
+	@Test
+	public void addLearner() {		
+		
+		String file = "{\r\n"
+				+ "    \"title\": \"Mr.\",\r\n"
+				+ "    \"firstName\": \"Babu\",\r\n"
+				+ "    \"middleName\": \"\",\r\n"
+				+ "    \"lastName\": \"Manickam\",\r\n"
+				+ "    \"age\": 45,\r\n"
+				+ "    \"address\": \"Chennai\",\r\n"
+				+ "    \"email\": \"hello@testleaf.com\",\r\n"
+				+ "    \"gender\": \"M\",\r\n"
+				+ "    \"mobile\": \"9390839290\",\r\n"
+				+ "    \"phoneNumber\": \"9390839290\"\r\n"
+				+ "}";
+		
+		Response response = postWithJsonAsBody(file, "learner/add");
 		verifyContentType(response, "application/json");
 		verifyResponseCode(response, 201);
 		verifyContentWithKey(response, "message", "Learner Successfully Added");
