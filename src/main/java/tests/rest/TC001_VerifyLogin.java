@@ -29,7 +29,7 @@ public class TC001_VerifyLogin extends RESTAssuredBase{
 		Response response = postWithJsonAsBody(file, "login");
 		verifyContentType(response, "application/json");
 		verifyResponseCode(response, 200);
-		verifyContentWithKey(response, "message", "Successfully Logged in");
+		verifyContentWithKey(response, "message", "Verified User Successfully");
 	}
 
 
